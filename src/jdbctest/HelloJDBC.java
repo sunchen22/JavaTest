@@ -59,9 +59,9 @@ public class HelloJDBC {
 			// 查詢也可結合order by達到排序目的,例如可用在討論區文章
 			while (rs.next()) { // 利用移動游標，取出資料
 			// 使用欄位名稱查詢
-				int deptno = rs.getInt("deptno"); // 括號內放欄位的名字 從括號內取資料存入前面
-				String dname = rs.getString("dname");
-				String loc = rs.getString("loc");
+				deptno = rs.getInt("deptno"); // 括號內放欄位的名字 從括號內取資料存入前面
+				dname = rs.getString("dname");
+				loc = rs.getString("loc");
 
 //				使用欄位索引值查詢:由1開始;
 //				int deptno = rs.getInt(1); // 括號內放欄位的名字 從括號內取資料存入前面
@@ -72,7 +72,7 @@ public class HelloJDBC {
 				System.out.println("DNAME = " + dname);
 				System.out.println("LOC = " + loc);
 //				System.out.println("=================");
-//			}
+			}
 
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
